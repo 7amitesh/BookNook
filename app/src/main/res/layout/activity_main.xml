@@ -18,7 +18,7 @@
             android:id="@+id/imageView3"
             android:layout_width="237dp"
             android:layout_height="167dp"
-            app:srcCompat="@drawable/logo" />
+            app:srcCompat="@drawable/logoo" />
 
         <TextView
             android:id="@+id/titile"
@@ -26,7 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:fontFamily="@font/poppins_semibold"
-            android:text="WELCOME TO THE LIBRARY"
+            android:text="WELCOME TO THE BOOKNOOK"
             android:textAlignment="center"
             android:textColor="@color/white" />
     </LinearLayout>

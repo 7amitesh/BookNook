@@ -26,7 +26,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="120dp"
             android:contentDescription="logo"
-            app:srcCompat="@drawable/logo" />
+            app:srcCompat="@drawable/logoo" />
 
 
         <TextView
@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:fontFamily="@font/poppins"
-            android:text="Welcome to the Library"
+            android:text="Welcome to the BookNook"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="12sp" />

@@ -3,7 +3,7 @@ package com.example.publiclibrary;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
-
+import android.view.View;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -38,23 +38,23 @@ public class Home extends AppCompatActivity {
             startActivity(new Intent(Home.this, ViewReservedBook.class));
         });
 
-        Button home = findViewById(R.id.btnhome);
-        home.setOnClickListener(v -> {
-            // refresh the activity
-            startActivity(getIntent());
-        });
+//        Button home = findViewById(R.id.btnhome);
+//        home.setOnClickListener(v -> {
+//            // Refresh the current activity
+//            finish(); // Close current instance
+//            startActivity(getIntent()); // Restart with same intent
+//        });
 
-        Button store = findViewById(R.id.btnstore);
-        store.setOnClickListener(v -> {
-            startActivity(new Intent(Home.this, ViewBook.class));
-        });
+//        Button store = findViewById(R.id.btnstore);
+//        store.setOnClickListener(v -> {
+//            startActivity(new Intent(Home.this, ViewBook.class));
+//        });
 
-
-
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+        View rootView = findViewById(R.id.main);
+        ViewCompat.setOnApplyWindowInsetsListener(rootView, (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+            v.setPadding(0, systemBars.top, 0, 0); // Only apply top inset for status bar
+            return WindowInsetsCompat.CONSUMED;
         });
     }
 }
